@@ -1,0 +1,91 @@
+<div id="activity-post-container">
+	<div class="login">
+		<?php
+		$this->pageTitle=Yii::app()->name . ' - Login';
+		$this->breadcrumbs=array(
+			'Login',
+		);
+		?>
+
+		<strong>Welcome to Rambutan</strong>
+
+		<p class="des">This is the proposal management software </p>
+		<div class="form">
+			<table class="activity-form">
+				<tbody>
+
+					<?php $form=$this->beginWidget('CActiveForm', array(
+						'id'=>'login-form',
+						'enableAjaxValidation'=>false,
+					)); ?>
+					<tr>
+						<td class="os-filter">
+						<div class="row">
+							<span class="lgn"><?php echo $form->label($model,'username'); ?></span>
+						</div>
+						</td>
+						<td class="os-input">
+						<div class="row">
+							<?php echo $form->textField($model,'username',array ('class'=>'os-text disabled')); ?>
+							<?php echo $form->error($model,'username'); ?>
+						</div>
+						</td>
+						<td class="os-button"></td>
+					</tr>
+					<tr>
+						<td class="os-filter">
+						<div class="row">
+							<span class="lgn"><?php echo $form->label($model,'password'); ?></span>
+						</div>
+						</td>
+						<td class="os-input">
+						<div class="row">
+							<?php echo $form->passwordField($model,'password',array ('class'=>'os-text disabled')); ?>
+							<?php echo $form->error($model,'password'); ?>
+						</div>
+						</td>
+						<td class="os-button"></td>
+					</tr>
+					<tr>
+					<td></td>
+						<td class="os-filter">
+							<span class="feed_item_tools">
+								Hint: You may login with <tt>demo/demo</tt> or <tt>admin/admin</tt>.
+							</span>		
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td class="os-button">
+						<div class="row rememberMe">
+							<?php echo $form->checkBox($model,'rememberMe'); ?>
+							<?php echo $form->label($model,'rememberMe'); ?>
+							<?php echo $form->error($model,'rememberMe'); ?>
+						</div>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td class="os-button">
+						<div class="row buttons">
+							<?php //echo CHtml::submitButton('Login'); ?>
+							<input type="image" class="log" name="yt0" src="<?php echo Yii::app()->request->hostInfo.Yii::app()->theme->baseUrl; ?>/views/layouts/img/lgn.png" title="login" value="login"/>
+						</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+		<?php $this->endWidget(); ?>
+		</div>
+
+		<div class="reg">
+			<table>
+				<tbody>
+				<tr><td><a href="#"><strong>Forgot password?</strong></a></td></tr>
+				<tr><td>Need a Rambutan account? <a href="http://www.youthspeak.com/signup" target="_blank"><strong>Sign up here </strong></a></td></tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
