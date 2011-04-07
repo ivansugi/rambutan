@@ -1,0 +1,8 @@
+2011/04/07 11:16:01 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rambutan.users' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `users`.
+in D:\xampp\htdocs\rambutan\index.php (13)
+2011/04/07 11:17:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "login".' in D:\xampp\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 D:\xampp\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('login')
+#1 D:\xampp\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\rambutan\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/rambutan/index.php/login
